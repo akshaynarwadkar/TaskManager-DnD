@@ -4,10 +4,12 @@ import TaskList from "./components/TaskList";
 import { v4 as uuidv4 } from "uuid";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import { TouchBackend } from "react-dnd-touch-backend";
 import styled from "styled-components";
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
+  const isMobile = window.innerWidth < 600;
   const newId = uuidv4();
   useEffect(() => {
     const tasksFromStorage = localStorage.getItem("tasks");
@@ -17,7 +19,7 @@ const App = () => {
   return (
     <div>
       <StyledHeading>Task Management Portal</StyledHeading>
-      <DndProvider backend={HTML5Backend}>
+      <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
         <Container>
           <TaskForm tasks={tasks} setTasks={setTasks} />
           <TaskList tasks={tasks} setTasks={setTasks} />
