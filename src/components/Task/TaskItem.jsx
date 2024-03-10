@@ -3,6 +3,7 @@ import TaskHeader from "./TaskHeader";
 import TaskDetails from "./TaskDetails";
 import toast from "react-hot-toast";
 import styled from "styled-components";
+import { IconBase } from "react-icons";
 
 const TaskItem = ({ status, tasks, setTasks, added, started, completed }) => {
   const [{ isOver }, drop] = useDrop(() => ({
@@ -32,6 +33,11 @@ const TaskItem = ({ status, tasks, setTasks, added, started, completed }) => {
     setTasks((prev) => {
       const mTasks = prev.map((t) => {
         if (t.id === id) {
+          if (t.status === status) {
+            toast("Ahh , It is in the same status❗");
+          } else {
+            toast.success("Task Status changed ");
+          }
           return { ...t, status: status };
         }
 
@@ -40,7 +46,7 @@ const TaskItem = ({ status, tasks, setTasks, added, started, completed }) => {
 
       localStorage.setItem("tasks", JSON.stringify(mTasks));
 
-      toast("Task Status changed 😮");
+      // toast("Task Status changed 😮");
 
       return mTasks;
     });
