@@ -33,9 +33,13 @@ const TaskItem = ({ status, tasks, setTasks, added, started, completed }) => {
       const mTasks = prev.map((t) => {
         if (t.id === id) {
           if (t.status === status) {
-            toast("Ahh , It is in the same status❗");
+            toast("Ahh , It is in the same status❗", {
+              position: "top-right",
+            });
           } else {
-            toast.success("Task Status changed ");
+            toast.success("Task Status changed ", {
+              position: "top-right",
+            });
           }
           return { ...t, status: status };
         }
