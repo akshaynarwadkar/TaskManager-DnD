@@ -61,16 +61,19 @@ const Input = styled.input`
   background-color: #edf2f7;
   border-radius: 0.375rem;
   margin-right: 1rem;
-  height: 3rem;
+  height: 2rem;
   width: 16rem;
-  padding: 0.25rem;
+  padding: 4px;
 `;
 
 const Button = styled.button`
   background-color: #2b6cb0;
-  border-radius: 0.375rem;
-  padding: 0.75rem 1rem;
-  height: 3rem;
+  border-radius: 4px;
+  padding: 20px;
+  height: 2rem;
   color: #fff;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

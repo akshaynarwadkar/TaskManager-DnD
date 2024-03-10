@@ -47,8 +47,8 @@ const DragContainer = styled.div`
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 2px 10px;
+  margin-top: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0.375rem;
   cursor: grab;
@@ -66,6 +66,5 @@ const StyledDeleteIcon = styled.svg`
   height: 1.5rem;
   stroke-width: 1.5;
   fill: none;
-  /* stroke: ${(props) => props.theme.textColor}; */
   stroke: #000;
 `;

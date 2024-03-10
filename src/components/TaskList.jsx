@@ -43,5 +43,16 @@ export default TaskList;
 
 const FlexContainer = styled.div`
   display: flex;
-  gap: 4rem; 
+  gap: 4rem;
+
+  @media (max-width: 768px) {
+    /* Styles for smaller screens (phones) */
+    flex-direction: column; /* Stack columns vertically */
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    /* Styles for tablets */
+    flex-direction: row; /*  Change back to row for tablets */
+    justify-content: space-between; /* Distribute columns evenly */
+  }
 `;

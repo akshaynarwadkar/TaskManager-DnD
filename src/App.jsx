@@ -20,7 +20,7 @@ const App = () => {
       <DndProvider backend={HTML5Backend}>
         <Container>
           <TaskForm tasks={tasks} setTasks={setTasks} />
-          <TaskList tasks={tasks} setTasks={setTasks} />;
+          <TaskList tasks={tasks} setTasks={setTasks} />
         </Container>
         //{" "}
       </DndProvider>
@@ -30,36 +30,30 @@ const App = () => {
 export default App;
 
 const StyledHeading = styled.h1`
-  height: 5rem; 
-  font-size: 2rem; 
-  @media (min-width: 1024px) {
-    font-size: 3rem;
+  font-size: 32px;
+  /* @media (min-width: 1024px) {
+    font-size: 32px;
   }
   @media (min-width: 1280px) {
-    font-size: 3rem; 
-  }
+    font-size: 3rem;
+  } */
   text-align: center;
-  background-image: linear-gradient(
-    to right,
-    #8b5cf6,
-    #3490dc
-  ); 
-  -webkit-background-clip: text; 
-  color: transparent; 
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #4949b6;
 `;
 
 const Container = styled.div`
-  background-color: #cbd5e0; 
-  width: 100vw; 
-  height: 100vh; 
+  background-color: #cbd5e0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.75rem; 
-  gap: 4rem; 
-  padding-top: 4rem; 
+  padding: 0.75rem;
+  gap: 2rem;
+  padding-top: 4rem;
 `;

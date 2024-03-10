@@ -27,7 +27,6 @@ const TaskItem = ({ status, tasks, setTasks, added, started, completed }) => {
     text = "completed";
     tasksToMap = completed;
   }
-  //   console.log("text inside section ", text);
 
   function addItemToSection(id) {
     setTasks((prev) => {
@@ -53,12 +52,14 @@ const TaskItem = ({ status, tasks, setTasks, added, started, completed }) => {
       {tasksToMap.length > 0 &&
         tasksToMap.map((task) => {
           return (
-            <TaskDetails
-              key={task.id}
-              task={task}
-              tasks={tasks}
-              setTasks={setTasks}
-            />
+            <div style={{ margin: "1px" }}>
+              <TaskDetails
+                key={task.id}
+                task={task}
+                tasks={tasks}
+                setTasks={setTasks}
+              />
+            </div>
           );
         })}
     </DropContainer>
