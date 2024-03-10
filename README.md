@@ -1,8 +1,19 @@
-# React + Vite
+Project Name - Task Manager - DnD
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Setup
+Clone: git clone https://github.com/akshaynarwadkar/TaskManager-DnD.git
+OR
+Download Zip File from https://github.com/akshaynarwadkar/TaskManager-DnD
+Extract it to your desired folder
 
-Currently, two official plugins are available:
+Open Command line
+Go to project Location : cd <project_location>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install: npm install (or yarn install)
+Development
+
+Start dev server: npm run dev (or yarn dev)
+Production Build
+
+Live Link
+https://taskmanager-dnd.netlify.app/
