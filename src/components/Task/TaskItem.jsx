@@ -3,7 +3,6 @@ import TaskHeader from "./TaskHeader";
 import TaskDetails from "./TaskDetails";
 import toast from "react-hot-toast";
 import styled from "styled-components";
-import { IconBase } from "react-icons";
 
 const TaskItem = ({ status, tasks, setTasks, added, started, completed }) => {
   const [{ isOver }, drop] = useDrop(() => ({
